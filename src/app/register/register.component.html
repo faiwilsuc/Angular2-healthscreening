@@ -1,0 +1,73 @@
+<div>
+<form >
+    
+    <div class="container patient fontcolor">
+        <h4>Patient</h4>
+        <div class="row">
+           <div class="col-sm-6 col-md-6">    
+                <label>SA ID</label>
+                <input type="text" name="nationalId" class="form-control" placeholder="name" [(ngModel)]="nid">
+                <label>Middle Name</label>
+                <input type="text" name="mname" class="form-control" [(ngModel)]="mname">
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <label >First Name</label>
+                <input type="text" class="form-control" 
+                name="fname"  [(ngModel)]="fname">
+                <label>Last Name</label>
+                <input type="text" class="form-control" name="lname"  [(ngModel)]="lname"  >
+            </div>
+        </div>
+    </div>
+    <div class="container address fontcolor">
+        <h4>Address</h4>
+        <div class="row">
+                    
+            <div class="col-sm-6 col-md-6">
+                <label>Address Line1</label>
+                <input type="text" class="form-control" name="add1" [(ngModel)]="add1">
+                <label>Address Line3</label>
+                <input type="text" class="form-control"name="add3"  [(ngModel)]="add3" >
+                <label>District</label>
+                <input type="text" class="form-control" name="district"  [(ngModel)]="district">
+                <label>Postcal Code</label>
+                <input type="text" class="form-control" name="postcode"  [(ngModel)]="postcode">
+                
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <label >Address Line2</label>
+                <input type="text" class="form-control" name="add2"  [(ngModel)]="add2">
+                <label>Suburb</label>
+                <input type="text" class="form-control" name="suburb" [(ngModel)]="suburb">
+                <label>Province</label>
+                <select class="dropdown" [(ngModel)]="seloptobj" name="sel2">
+                    <option [ngValue]="i.id" *ngFor="let i of devices">{{i.name}}</option>
+          
+                </select>
+               
+            </div>
+        </div>
+    </div>
+     <div class="container contact fontcolor">
+        <h4>Contact Detail</h4>
+        <div class="row">
+                    
+            <div class="col-sm-6 col-md-6">
+                <label>Mobile Number</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="mobile" name="mobile">
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <label>Email</label>
+                <input type="text" class="form-control" 
+                [(ngModel)]="email" name="mobile">
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button class="btn btn-success"style="margin-right: 31px;" type="submit" (click)="registerOnClick()">Submit</button>
+        <button class="btn btn-danger" type="submit">Cancel</button>
+    </div>
+</form>
+<!--<label>seloptobj: {{seloptobj}}</label>-->
+</div>

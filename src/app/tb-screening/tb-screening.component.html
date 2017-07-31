@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="screen1">
+     <h3 style="color:white;text-align:center;">TUBERCULOSIS SCREENING TOOL<br><span style="color:blue;font-size: smaller;text-align: center;">AND RISK QUESTIONNAIRE</span></h3>
+  </div>
+   <div class="screen2" >
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-sm-4">
+          <label for="">DATE</label>
+          <input type="text"  id="date" value ="2017-05-13T22:00:00">
+        </div>
+        <div class="col-sm-8">
+          <label for="">FACULTY NAME</label>
+          <input type="text"  id="faculty" >
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+          <label for="">DISTRICT</label>
+          <input type="text" class="form-control" id="faculty">
+      </div>
+      <div class="col-sm-4">
+          <label for="">SUB-DISTRICT</label>
+          <input type="text" class="form-control" id="faculty">
+      </div>
+      <div class="col-sm-4">
+          <label for="">PROVINCE</label>
+          <input type="text" class="form-control" id="faculty" value="3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="">PATIENT CONTACT NO</label>
+        <input type="text" class="form-control" id="faculty">
+      </div>
+      <div class="col-sm-6">
+        <label for="">PATIENT NO</label>
+        <input type="text" class="form-control" id="faculty" value="2">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+      <div class="col-sm-4"><label for="">PATIENT NAME AND SURNAME</label></div>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="date" value="Vamsi Yalamanchili">
+      </div>
+      
+    </div>
+   </div> 
+
+  <div style="text-align: right">
+    <button class="btn btn-primary" (click)="screenClick()">yes/no</button>
+    
+  </div>
+</div>  
+<br>
+ 
+  <div class="container">
+    
+    <div class="row screen3" *ngFor="let question of questions;let i=index">
+      <div class="col-sm-11" >
+        <h5>{{question.q}}</h5>
+      </div>
+      <div class="col-sm-1">
+        <input type="checkbox" [(ngModel)]="options[i]">
+      </div>
+    </div>
+    
+    <br>
+    <h5>If “Yes” to one or more of the questions, suspect TB, refer for further investigations OR investigate for TB e.g. sputum collection</h5>
+    <br>
+    <h4 class="screen4">COMPLEMENTARY QUESTIONS</h4>
+    <br>
+
+     <div class="row screen3"  *ngFor="let comq of comqs let i= index">
+      <div class="col-sm-11" >
+        <h5 style="font-family: roboto sans-serif;">{{comq.q}}</h5>
+      </div>
+      <div class="col-sm-1"><input type="checkbox" ></div>
+    </div>
+    <br>
+    <h5>If “No” to all questions, patient is not a TB suspect. Repeat the screening in 3-6 months time.</h5>
+    <div style ="text-align:right"><button class="btn btn-success" (click)="onSubmit()">Submit</button></div>
+  </div>
+  
+

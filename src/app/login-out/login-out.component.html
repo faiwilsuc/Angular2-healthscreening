@@ -1,0 +1,17 @@
+ <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+						<input type="text" name="user" placeholder="Username" [(ngModel)]="user">
+						<input type="password" name="pass" placeholder="Password" [(ngModel)]="password">
+						<input type="submit" name="login" (click)="handleOnClick()"  class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <!--<div class="login-help">
+						<a href="#">Register</a>  
+						<a href="#">Forgot Password</a>
+				  </div>-->
+					  <a class="nav-link" style="color:green"[routerLink]="['/signup']" routerLinkActive="active">Sign Up</a>
+					 
+				</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>SignUp</h1><br>
+				  <form>
+						<input type="text" name="user" placeholder="Username" [(ngModel)]="user">
+						<input type="password" name="pass" placeholder="Password" [(ngModel)]="password">
+            <input type="nId"  class = "height" name="id" placeholder="nationalid" [(ngModel)]="nId">
+            <input type="fname" class = "height" name="fname" placeholder="firstname" [(ngModel)]="fname">
+						<input type="lname" class = "height" name="lname" placeholder="lastname" [(ngModel)]="lname">
+            <input type="email" class = "height" name="email" placeholder="email" [(ngModel)]="email">
+						<input type="submit" name="signup" (click)="SignUpClick()"  class="login loginmodal-submit" value="SignUp">
+				  </form>
+					
+				  <!--<div class="login-help">
+						<a href="#">Register</a>  
+						<a href="#">Forgot Password</a>
+				  </div>-->
+					  <!--<a class="nav-link" [routerLink]="['/signup']" routerLinkActive="active">Signup</a>-->
+					 
+				</div>
+</div>

@@ -1,0 +1,56 @@
+<div class="container patient">
+    <h4>Patient</h4>
+    <div class="row">
+        <div class="col-sm-6 col-md-6" style="color: white">
+            <label>SA ID</label>
+            <input type="text" class="form-control" 
+            [(ngModel)]="nid" name="nid">
+            <label>Middle Name</label>
+            <input type="text" class="form-control" 
+            name="mname" [(ngModel)]="mname">
+        </div>
+        <div class="col-sm-6 col-md-6" style="color: white">
+            <label >First Name</label>
+            <input type="text" class="form-control" 
+            name="fname"  [(ngModel)]="fname">
+            <label>Last Name</label>
+            <input type="text" class="form-control" 
+            name="lname" [(ngModel)]="lname">
+        </div>
+        <div class="button">
+          <button class="btn-primary" (click) = "searchOnClick()">Search</button>
+        </div>
+    </div>
+</div>
+
+<!--table-->
+<div class="container table-border">
+       
+  <table class="table table-bordered table-hover ">
+    <thead>
+      <tr class="success">
+        <th></th>
+        <th>SA ID</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of patients; let i = index">
+        <td><input type="checkbox" name="radiogroup"  [(ngModel)]="opts[i]"><br></td>
+        <td>{{item.id}}</td>
+        <td>{{item.first_name}}</td>
+        <td>{{item.middle_name}}</td>
+        <td>{{item.last_name}}</td>
+             
+      </tr>
+     
+    </tbody>
+  </table>
+  <div class="button">
+          <button class="btn-primary" (click) = "nextOnClick()">Next</button>
+  </div>
+</div>
+

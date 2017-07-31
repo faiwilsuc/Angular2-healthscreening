@@ -1,0 +1,81 @@
+<header class="app-header navbar">
+    <div class="col-md-2 col-sm-2">
+        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">&#9776;</button>
+        <a class="navbar-brand" style = "float:left" href="#"></a>
+        <ul class="nav navbar-nav hidden-md-down">
+            <li class="nav-item">
+                <a class="nav-link navbar-toggler sidebar-toggler"  href="#" style = "margin-top:36px">&#9776;</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10 col-sm-10">
+        
+        <!--<input type="text"  class="input" placeholder="text" id="text">
+        <input type="text"  class="input" placeholder="*********" id="number">-->
+        <li class="nav-item dropdown" style="text-align:right" dropdown (onToggle)="toggled($event)">
+            <a class="nav-link dropdown-toggle" style="padding-top: 11px" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" dropdownToggle>
+                <!--<a style="padding:9px;text-align:right" class="img-avatar admin" alt="admin@bootstrapmaster.com"></a>-->
+                <img src="assets/img/avatars/admin.jpg" style="width: 45px;height: 45px; border-radius: 50%;"class="img-avatar">
+                <span class="hidden-md-down" style="color: #54ccf7">Vamsi Yalamanchili</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" dropdownMenu aria-labelledby="simple-dropdown">
+
+                <div class="dropdown-header text-center"><strong>Account</strong></div>
+
+                <a class="dropdown-item"><i class="fa fa-user"></i> Vamsi Yalamanchili</a>
+                <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/login']"><i class="fa fa-lock"></i> Log out</a>
+             
+            </div>
+        </li>
+        
+       
+        
+    </div>
+</header>
+
+<div class="app-body">
+    <div class="sidebar" style = "padding-top:56px;">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/register']"><i class="icon-pie-chart"></i> Register Patient</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/health']"><i class="icon-pie-chart"></i> Health Screenings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/tb-screening']"><i class="icon-pie-chart"></i>TB Screening</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/login']"><i class="icon-pie-chart"></i> Login</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <main class="main back" style = "width:77%">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <breadcrumbs></breadcrumbs>
+        </ol>
+
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /.conainer-fluid -->
+        <footer class="app-footer">
+            <!--<a href="http://coreui.io">CoreUI</a> &copy; 2017 creativeLabs.
+            <span class="float-right">Powered by <a href="http://coreui.io">CoreUI</a>
+            </span>-->
+            <div class="footer">
+            </div>                
+            <div class="footer1">               
+            </div>
+        </footer>
+    </main>
+</div>
+
+
